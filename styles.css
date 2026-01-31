@@ -1,0 +1,77 @@
+body {
+  /* Option 1: Small looping shooting Mega Man GIF – paste your favorite direct .gif link here */
+  background: url('https://media1.tenor.com/m/0Z6zL.gif') repeat;  /* Try this – common small animated buster shot from Tenor searches */
+
+  /* Option 2: Another popular pixel shoot loop (from sprite communities) */
+  /* background: url('https://media.tenor.com/images/some-id/megaman-x-buster-shoot.gif') repeat; */  /* Replace 'some-id' with actual from tenor.com/search/megaman-shooting */
+
+  /* Option 3: If you find a better one on tenor.com or giphy.com */
+  /* background: url('YOUR_DIRECT_GIF_URL_HERE') repeat; */
+
+  background-color: #000022; /* fallback */
+
+  /* ... rest of your styles ... */
+
+  background-size: auto;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* If your GIF isn't perfectly seamless, add subtle movement via CSS (optional chaos) */
+body {
+  animation: subtle-scroll 60s linear infinite; /* Slow pan for extra 90s feel */
+}
+
+@keyframes subtle-scroll {
+  from { background-position: 0 0; }
+  to   { background-position: 64px 64px; } /* Match your sprite size, e.g. 32px or 64px tile */
+}
+
+marquee {
+  font-size: 40px;
+  color: fuchsia;
+}
+
+#unlockBtn {
+  background: #ff00ff;
+  color: #000;
+  border: 5px double #00ffff;
+  padding: 30px 60px;
+  font-size: 32px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  cursor: pointer;
+  margin: 40px auto;
+  display: block;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.4; }
+}
+
+#unlockBtn:hover {
+  background: #00ffff;
+  color: #ff00ff;
+}
+
+#status {
+  color: green;
+  font-size: 24px;
+  margin: 21px;
+}
+
+/* Subtle darken overlay so text pops on busy animated bg */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#Kirby {
+  border: 2px solid red;
+  border-radius: 10px;
+}
