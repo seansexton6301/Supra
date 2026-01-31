@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Supra Mk4 Fan Page</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        Toyota Supra Mk4
+    </header>
+
+    <main>
+        <h2>The Iconic A80 Supra!!</h2>
+
+        <img 
+            src="https://farm3.staticflickr.com/2917/14718936304_849575a048_b.jpg" 
+            alt="Toyota Supra Mk4"
+        >
+
+        <p>
+            The Toyota Supra Mk4 (A80), produced from 1993 to 2002, is a legendary sports car celebrated for its timeless design and incredible performance. Powered by the iconic <strong>2JZ-GTE</strong> 3.0-liter twin-turbo inline-six engine, the Mk4 became a tuning legend and a cultural icon—famously featured in movies like <em>The Fast and the Furious</em>.
+        </p>
+
+        <button onclick="showToast()">Show Welcome Message</button>
+
+        <div id="toast" class="toast">Welcome to the Supra Mk4 Fan Page!</div>
+
+        <h3>Watch the Mk4 Supra in Action</h3>
+
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/yvh2HYIyBAs?si=5MSYDx6W2xskxr0b" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <h3>Key Features</h3>
+
+        <ul>
+            <li>~320 horsepower (stock 2JZ-GTE, US spec)</li>
+            <li>0-60 mph in ~4.6 seconds</li>
+            <li>Twin-turbocharged 2JZ-GTE engine</li>
+            <li>6-speed manual or 4-speed automatic transmission</li>
+        </ul>
+
+        <p>
+            With its robust engineering and massive tuning potential! (the 2JZ is famous for handling 1000+ hp reliably), the Supra Mk4 remains a favorite among car enthusiasts and collectors worldwide.
+        </p>
+
+        <address>
+            <h4>Rivsu Imports</h4>
+            <p>
+                1234 Elm Street<br>
+                Springfield, IL 62701<br>
+                United States
+            </p>
+            <p>Phone: <a href="tel:+18666632635">+1 (866) 663-2635</a></p>
+            <p>Email: <a href="mailto:sean@yoloswaggy.com">sean@yoloswaggy.com</a></p>
+        </address>
+    </main>
+
+    <footer>
+        © Sean | Toyota Supra Enthusiast
+        <div id="datetime"></div>
+    </footer>
+
+    <script>
+        // Toast function
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500); // Matches fadeout timing
+        }
+
+        // Dynamic datetime
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+            };
+            document.getElementById('datetime').textContent = now.toLocaleString('en-US', options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 60000); // Update every minute
+    </script>
+
+</body>
+</html>
